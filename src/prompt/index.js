@@ -18,7 +18,7 @@ const insertDialog = () => {
     
         .iBiometric_dialog {
           width: 30%;
-          min-height: 40%;
+          min-height: 30%;
           height: fit-content;
           background-color: #ffffff;
           margin: auto;
@@ -28,6 +28,7 @@ const insertDialog = () => {
     
         .iBiometric_dialog>h2 {
           text-align: center;
+          padding-bottom: 8px;
         }
 
         .iBiometric_dialog> .iBiometric_ButtonContainer {
@@ -45,6 +46,7 @@ const insertDialog = () => {
     
         .iBiometric_dialog>.iBiometric_button {
           text-align: center;
+          padding-top: 10px;
 
         }
     
