@@ -35,7 +35,9 @@ var publicKey = {
 
     authenticatorSelection: {
         // Try to use UV if possible. This is also the default.
-        userVerification: "preferred"
+        userVerification: "required",
+        authenticatorAttachment: 'cross-platform',
+        requireResidentKey: "platform",
     },
 
     timeout: 360000,  // 6 minutes
