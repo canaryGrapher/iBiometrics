@@ -9,15 +9,15 @@ var publicKey = {
 
     // Relying Party:
     rp: {
-        id: "localhost",
-        name: "localhost"
+        id: "ribstgnew.icicibank.com",
+        name: "ICICI Bank"
     },
 
     // User:
     user: {
         id: Uint8Array.from(window.atob("MIIBkzCCATigAwIBAjCCAZMwggE4oAMCAQIwggGTMII="), c => c.charCodeAt(0)),
-        name: "alex.mueller@example.com",
-        displayName: "Alex Müller",
+        name: "test_user@icicibank.com",
+        displayName: "Test User",
     },
 
     // This Relying Party will accept either an ES256 or RS256 credential, but

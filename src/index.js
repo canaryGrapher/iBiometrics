@@ -6,16 +6,21 @@ import insertDialog from "./prompt";
 var challenge = new Uint8Array(32);
 window.crypto.getRandomValues(challenge);
 
-
-
-// function RegisterUser() {
-//     const GeneratedPublicKey = credentialOptions("Kosv9fPtkDoh4Oz7Yq/pVgWHS8HhdlCto5cR0aBoVMw=")
-//     const credentials = navigator.credentials.create({
-//         publicKey: GeneratedPublicKey
-//     })
-//     console.log(credentials)
-// }
-
+const getPageFromArray = (searchVPV) => {
+    const vpvArray = [];
+    window.dataLayer.forEach(item => {
+        // eslint-disable-next-line no-prototype-builtins
+        if (item.hasOwnProperty('page')) {
+            vpvArray.push(item.page);
+            // eslint-disable-next-line no-prototype-builtins
+        } else if (item.hasOwnProperty('vpv')) {
+            vpvArray.push(item.vpv);
+        } else {
+            return 0
+        };
+    });
+    return vpvArray.includes(searchVPV);
+};
 
 const checkPlatformAuthenticationAvailability = async () => {
     const isAuthPossible = await PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
@@ -34,10 +39,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         const alreadyRegistered = window.localStorage.getItem("registrationDone")
         console.log("Already registered state: " + alreadyRegistered)
         if (alreadyRegistered == "true") {
-            console.log("Trying to login")
-            handleLogin()
+            if (getPageFromArray("/VPV/LI/ShoppingMall/PaymentandTransfer/ShoppingMall-LoginPage")) {
+                console.log("Trying to login")
+                handleLogin()
+            }
         } else {
-            insertDialog()
+            if (getPageFromArray("/VPV/LI/ShoppingMall/PaymentandTransfer/ShoppingMall-GCAConfirmation")) {
+                insertDialog()
+            }
         }
         document.querySelector(".iBiometric_closeButton")?.addEventListener("click", () => {
             const dialogContainer = document.querySelector('.iBiometric_container');
