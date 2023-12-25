@@ -1,0 +1,29 @@
+{
+  "name": "biometric",
+  "version": "1.0.0",
+  "description": "WebAuthn implmentation on ICICI Bank website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack",
+    "dev": "npx webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canaryGrapher/iBiometrics.git"
+  },
+  "keywords": [
+    "Webauthn",
+    "authentication"
+  ],
+  "author": "Yash Aryan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/canaryGrapher/iBiometrics/issues"
+  },
+  "homepage": "https://github.com/canaryGrapher/iBiometrics#readme",
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
