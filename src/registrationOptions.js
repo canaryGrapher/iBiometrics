@@ -9,8 +9,8 @@ var publicKey = {
 
     // Relying Party:
     rp: {
-        id: "ribstgnew.icicibank.com",
-        name: "ICICI Bank"
+        id: "icicibank.com",
+        name: "ICICI Bank Limited"
     },
 
     // User:
