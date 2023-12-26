@@ -36,9 +36,9 @@ const loginOptions = {
     timeout: 360000,  // 6 minutes
     rpId: "ribstgnew.icicibank.com",
 
-    authenticatorSelection: {
-        userVerification: "preferred"
-    },
+    // authenticatorSelection: {
+    //     userVerification: "preferred"
+    // },
 }
 
 export { registrationOptions, loginOptions }
