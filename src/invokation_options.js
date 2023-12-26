@@ -27,17 +27,16 @@ const registrationOptions = {
     authenticatorSelection: {
         // only stick to device specific authentication like Windows Hello / TouchID / FingerPrint authentication
         authenticatorAttachment: 'platform',
-        // Try to use UV if possible. This is also the default.
-        userVerification: "required",
-        requireResidentKey: true,
-        residentKey: 'required'
+        // userVerification: "required",
+        // requireResidentKey: true,
+        // residentKey: 'required'
     },
     timeout: 360000,  // 6 minutes
-    excludeCredentials: [
-        // Don’t re-register any authenticator that has one of these credentials
-        { "id": Uint8Array.from(window.atob("ufJWp8YGlibm1Kd9XQBWN1WAw2jy5In2Xhon9HAqcXE="), c => c.charCodeAt(0)), "type": "public-key" },
-        { "id": Uint8Array.from(window.atob("E/e1dhZc++mIsz4f9hb6NifAzJpF1V4mEtRlIPBiWdY="), c => c.charCodeAt(0)), "type": "public-key" }
-    ],
+    // excludeCredentials: [
+    //     // Don’t re-register any authenticator that has one of these credentials
+    //     { "id": Uint8Array.from(window.atob("ufJWp8YGlibm1Kd9XQBWN1WAw2jy5In2Xhon9HAqcXE="), c => c.charCodeAt(0)), "type": "public-key" },
+    //     { "id": Uint8Array.from(window.atob("E/e1dhZc++mIsz4f9hb6NifAzJpF1V4mEtRlIPBiWdY="), c => c.charCodeAt(0)), "type": "public-key" }
+    // ],
 };
 
 const loginOptions = {
@@ -46,9 +45,6 @@ const loginOptions = {
     rp: {
         id: "icicibank.com",
         name: "ICICI Bank Limited"
-    },
-    extensions: {
-        uvm: true, // Include the User Verification Method extension
     },
     authenticatorSelection: {
         userVerification: "preferred"
