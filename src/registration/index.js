@@ -1,7 +1,7 @@
 import { registrationOptions } from "../invokation_options"
 
 const handleRegistration = () => {
-    navigator.credentials.create({ registrationOptions })
+    navigator.credentials.create()
         .then((newCredentialInfo) => {
             // Handle successful WebAuthn registration
             console.log("WebAuthn registration done: ", newCredentialInfo)
