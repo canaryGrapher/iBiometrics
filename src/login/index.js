@@ -4,6 +4,7 @@ const handleLogin = () => {
     // const credentialOptionsData = credentialOptions("asoiughasogsadgj")
     navigator.credentials.get({ publicKey })
         .then((newCredentialInfo) => {
+            alert("Server logic -> login")
             // Handle successful WebAuthn registration
             console.log(newCredentialInfo);
         })
