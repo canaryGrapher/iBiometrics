@@ -16,11 +16,10 @@ const insertDialog = () => {
     
         .iBiometric_dialog {
           width: 30%;
-          min-height: 30%;
           height: fit-content;
           background-color: #ffffff;
           margin: auto;
-          padding: 20px;
+          padding: 15px;
           border-radius: 10px;
         }
     
@@ -66,7 +65,7 @@ const insertDialog = () => {
             <button class="iBiometric_closeButton" type="button">×</button>
         </div>
         <h2>Update</h2>
-        <p>Reduce the number of times you have to login for payment. Use your screen lock credentials for logging in.</p>
+        <p>| Reduce the number of times you have to login for payment. Use your screen lock credentials for logging in.</p>
         <div class="iBiometric_button">
           <button type="button" id="iBiometric_invokeBiometricRegistration">Enable screen lock login</button>
         </div>
