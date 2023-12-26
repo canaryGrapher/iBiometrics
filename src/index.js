@@ -38,25 +38,25 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log("It does support authentication. Inititalizing registration");
         const alreadyRegistered = window.localStorage.getItem("registrationDone")
         console.log("Already registered state: " + alreadyRegistered)
-        if (alreadyRegistered == "true") {
-            if (getPageFromArray("/VPV/LI/ShoppingMall/PaymentandTransfer/ShoppingMall-LoginPage")) {
-                console.log("Trying to login")
-                handleLogin()
-            }
-        } else {
-            if (getPageFromArray("/VPV/LI/ShoppingMall/PaymentandTransfer/ShoppingMall-GCAConfirmation")) {
-                insertDialog()
-            }
+        // if (alreadyRegistered == "true") {
+        if (getPageFromArray("/VPV/LI/ShoppingMall/PaymentandTransfer/ShoppingMall-LoginPage")) {
+            console.log("Trying to login")
+            handleLogin()
         }
-        document.querySelector(".iBiometric_closeButton")?.addEventListener("click", () => {
-            const dialogContainer = document.querySelector('.iBiometric_container');
-            dialogContainer.style.display = 'none';
-        })
-        document.querySelector("#iBiometric_invokeBiometricRegistration")?.addEventListener("click", () => {
-            const dialogContainer = document.querySelector('.iBiometric_container');
-            dialogContainer.style.display = 'none';
-            handleRegistration()
-        })
+        // } else {
+        if (getPageFromArray("/VPV/LI/ShoppingMall/PaymentandTransfer/ShoppingMall-GCAConfirmation")) {
+            insertDialog()
+            document.querySelector(".iBiometric_closeButton")?.addEventListener("click", () => {
+                const dialogContainer = document.querySelector('.iBiometric_container');
+                dialogContainer.style.display = 'none';
+            })
+            document.querySelector("#iBiometric_invokeBiometricRegistration")?.addEventListener("click", () => {
+                const dialogContainer = document.querySelector('.iBiometric_container');
+                dialogContainer.style.display = 'none';
+                handleRegistration()
+            })
+        }
+        // }
     }
     else {
         alert('Registration not possible')
