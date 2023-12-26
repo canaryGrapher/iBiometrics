@@ -34,10 +34,12 @@ var publicKey = {
     ],
 
     authenticatorSelection: {
+        // only stick to device specific authentication like Windows Hello / TouchID / FingerPrint authentication
+        authenticatorAttachment: 'platform',
         // Try to use UV if possible. This is also the default.
         userVerification: "required",
-        authenticatorAttachment: 'cross-platform',
-        requireResidentKey: "platform",
+        requireResidentKey: true,
+        residentKey: 'required'
     },
 
     timeout: 360000,  // 6 minutes
