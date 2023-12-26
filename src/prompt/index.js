@@ -2,8 +2,6 @@ const insertDialog = () => {
   console.log("appending dialog")
   console.log("Create a style element")
   var styleElement = document.createElement('style');
-
-  console.log("Set the CSS rules")
   styleElement.textContent = `
         .iBiometric_container {
           position: fixed;
@@ -60,8 +58,6 @@ const insertDialog = () => {
           cursor: pointer;
         }
       `;
-
-  console.log("Append the style element to the head")
   document.head.appendChild(styleElement);
   document.body.insertAdjacentHTML('afterbegin', `
     <div class="iBiometric_container">
