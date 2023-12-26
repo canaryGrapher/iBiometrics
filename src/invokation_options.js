@@ -8,7 +8,7 @@ const registrationOptions = {
     },
     // User:
     user: {
-        id: Uint8Array.from(window.atob("MICICIBankDataAjCCAZMwggE4oAMCAQIwggGTMII="), c => c.charCodeAt(0)),
+        id: Uint8Array.from(window.atob("MICICIBankDataAjJohnDoewggE4oAMCAQIwggGTMII="), c => c.charCodeAt(0)),
         name: "john_doe@icicibank.com",
         displayName: "John Doe",
     },
@@ -26,17 +26,9 @@ const registrationOptions = {
     ],
     authenticatorSelection: {
         // only stick to device specific authentication like Windows Hello / TouchID / FingerPrint authentication
-        authenticatorAttachment: 'platform',
-        userVerification: "required",
-        requireResidentKey: true,
-        residentKey: 'required'
+        authenticatorAttachment: 'platform', // Corrected property name
     },
     timeout: 360000,  // 6 minutes
-    // excludeCredentials: [
-    //     // Don’t re-register any authenticator that has one of these credentials
-    //     { "id": Uint8Array.from(window.atob("ufJWp8YGlibm1Kd9XQBWN1WAw2jy5In2Xhon9HAqcXE="), c => c.charCodeAt(0)), "type": "public-key" },
-    //     { "id": Uint8Array.from(window.atob("E/e1dhZc++mIsz4f9hb6NifAzJpF1V4mEtRlIPBiWdY="), c => c.charCodeAt(0)), "type": "public-key" }
-    // ],
 };
 
 const loginOptions = {
