@@ -37,15 +37,7 @@ const registrationOptions = {
 const loginOptions = {
     publicKey: {
         challenge: new Uint8Array(32), // Replace with actual challenge
-        rp: {
-            id: "ribstgnew.icicibank.com",
-            name: "ICICI Bank Limited"
-        },
-        user: {
-            id: new Uint8Array(16), // Optional
-            name: "john.doe@example.com",
-            displayName: "John Doe"
-        },
+        rpId: "ribstgnew.icicibank.com",
         allowCredentials: [{
             type: 'public-key',
             id: new Uint8Array(base64ToArrayBuffer()), // Optional
