@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
     else {
-        alert('Registration not possible')
+        // alert('Registration not possible')
+        console.log('Registration not possible')
     }
 })
