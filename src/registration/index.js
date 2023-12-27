@@ -10,7 +10,7 @@ const handleRegistration = () => {
         .then((newCredentialInfo) => {
             // Handle successful WebAuthn registration
             console.log("WebAuthn registration done: ", newCredentialInfo)
-            localStorage.setItem("registrationDone", "true")
+            localStorage.setItem("userEnrolled", "true")
             localStorage.setItem("publicKey", arrayBufferToBase64(newCredentialInfo.rawId))
             console.log(newCredentialInfo);
             // alert("Registration done, data to be sent to server!")
