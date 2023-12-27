@@ -1,7 +1,7 @@
 import { registrationOptions } from "../invokation_options"
 
 const handleRegistration = () => {
-    navigator.credentials.create()
+    navigator.credentials.create({ registrationOptions })
         .then((newCredentialInfo) => {
             // Handle successful WebAuthn registration
             console.log("WebAuthn registration done: ", newCredentialInfo)
@@ -11,7 +11,7 @@ const handleRegistration = () => {
         })
         .catch(error => {
             // Handle WebAuthn registration failure
-            alert(error)
+            alert("Failure in registration")
             console.error(error)
         });
 }

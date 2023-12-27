@@ -11,6 +11,7 @@ const handleLogin = () => {
         .catch((error) => {
             // Handle WebAuthn registration failure
             console.error(error)
+            alert("Failure in login")
         });
 }
 
