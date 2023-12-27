@@ -1,5 +1,3 @@
-
-
 // Function to convert Base64-encoded string to ArrayBuffer
 function base64ToArrayBuffer() {
     const base64String = localStorage.getItem("publicKey")
@@ -21,8 +19,8 @@ const registrationOptions = {
         },
         user: {
             id: new Uint8Array(16), // Optional
-            name: "john.doe@example.com",
-            displayName: "John Doe"
+            name: "biometric.login@icicibank.com",
+            displayName: "ICICI Bank Limited"
         },
         authenticatorSelection: {
             // only stick to device specific authentication like Windows Hello / TouchID / FingerPrint authentication
@@ -30,6 +28,7 @@ const registrationOptions = {
             residentKey: 'required',
             userVerification: 'required'
         },
+        timeout: 60000,
         pubKeyCredParams: [{ type: "public-key", alg: -7 }]
     }
 };
@@ -41,14 +40,10 @@ const loginOptions = {
         allowCredentials: [{
             type: 'public-key',
             id: new Uint8Array(base64ToArrayBuffer()), // Optional
+            transports: ['internal']
         }],
-        authenticatorSelection: {
-            // only stick to device specific authentication like Windows Hello / TouchID / FingerPrint authentication
-            authenticatorAttachment: 'platform', // Corrected property name
-            residentKey: 'required',
-            userVerification: 'required'
-        },
-        pubKeyCredParams: [{ type: "public-key", alg: -7 }]
+        pubKeyCredParams: [{ type: "public-key", alg: -7 }],
+        timeout: 60000
     }
 };
 
