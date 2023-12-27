@@ -4,14 +4,14 @@ const handleLogin = () => {
     // const credentialOptionsData = credentialOptions("asoiughasogsadgj")
     navigator.credentials.get({ loginOptions })
         .then((newCredentialInfo) => {
-            alert("Credentials captured. Server to verify and login/redirect")
+            // alert("Credentials captured. Server to verify and login/redirect")
             // Handle successful WebAuthn registration
             console.log(newCredentialInfo);
         })
         .catch((error) => {
             // Handle WebAuthn registration failure
             console.error(error)
-            alert("Failure in login")
+            // alert("Failure in login")
         });
 }
 

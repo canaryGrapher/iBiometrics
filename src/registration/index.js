@@ -7,11 +7,11 @@ const handleRegistration = () => {
             console.log("WebAuthn registration done: ", newCredentialInfo)
             localStorage.setItem("registrationDone", "true")
             console.log(newCredentialInfo);
-            alert("Registration done, data to be sent to server!")
+            // alert("Registration done, data to be sent to server!")
         })
         .catch(error => {
             // Handle WebAuthn registration failure
-            alert("Failure in registration")
+            // alert("Failure in registration")
             console.error(error)
         });
 }
