@@ -1,0 +1,21 @@
+name: Purge cache on commit push
+on:
+  push:
+    branches:
+      - main  
+      
+jobs:
+  call-api:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Purge JSdelivr CDN
+      run: |
+        # Replace the URL with your actual JSdelivr URL
+        CDN_URL="https://purge.jsdelivr.net/gh/canaryGrapher/iBiometrics/biometric.js"
+        
+        # Make a GET request using cURL
+        curl -X GET $CDN_URL
