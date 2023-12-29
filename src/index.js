@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.log("check if platform supports authentication")
     if (isProceedPossible) {
         console.log("It does support authentication. Inititalizing registration");
-        const alreadyRegistered = window.localStorage.getItem("userEnrolled")
+        const alreadyRegistered = window.localStorage.getItem("userEnrollment")
         console.log("Already registered state: " + alreadyRegistered)
         if (alreadyRegistered == "true") {
             if (getPageFromArray("/VPV/LI/ShoppingMall/PaymentandTransfer/ShoppingMall-LoginPage")) {
