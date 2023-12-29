@@ -25,7 +25,8 @@ const registrationOptions = {
         authenticatorSelection: {
             // only stick to device specific authentication like Windows Hello / TouchID / FingerPrint authentication
             authenticatorAttachment: 'platform', // Corrected property name
-            residentKey: 'required',
+            residentKey: 'discouraged',
+            requireResidentKey: false,
             userVerification: 'required'
         },
         timeout: 60000,
