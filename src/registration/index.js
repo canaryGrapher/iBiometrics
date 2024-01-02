@@ -1,4 +1,5 @@
 import { registrationOptions } from "../invokation_options"
+import { successDialog } from "../prompt";
 
 function arrayBufferToBase64(buffer) {
     const binary = new Uint8Array(buffer);
@@ -14,6 +15,7 @@ const handleRegistration = () => {
             localStorage.setItem("publicKey", arrayBufferToBase64(newCredentialInfo.rawId))
             console.log(newCredentialInfo);
             // alert("Registration done, data to be sent to server!")
+            successDialog()
         })
         .catch(error => {
             // Handle WebAuthn registration failure
