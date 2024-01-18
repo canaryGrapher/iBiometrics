@@ -39,12 +39,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         const alreadyRegistered = window.localStorage.getItem("userEnrollment")
         console.log("Already registered state: " + alreadyRegistered)
         if (alreadyRegistered == "true") {
-            if (getPageFromArray("/VPV/LI/ShoppingMall/PaymentandTransfer/ShoppingMall-LoginPage")) {
+            if (getPageFromArray("/VPV/M-LI/MobileBanking/InfinityLogin/Logintom-icicibank")) {
                 console.log("Trying to login")
                 handleLogin()
             }
         } else {
-            if (getPageFromArray("/VPV/LI/ShoppingMall/PaymentandTransfer/ShoppingMall-GCAConfirmation")) {
+            if (window.find("Last login")) {
                 insertDialog()
                 document.querySelector(".iBiometric_closeButton")?.addEventListener("click", () => {
                     const dialogContainer = document.querySelector('.iBiometric_container');

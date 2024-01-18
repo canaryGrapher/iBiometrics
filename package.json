@@ -1,6 +1,6 @@
 {
   "name": "biometric",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "WebAuthn implmentation on ICICI Bank website",
   "main": "index.js",
   "scripts": {
