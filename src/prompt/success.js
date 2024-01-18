@@ -1,10 +1,11 @@
 // update local25 -> removed prompt for Passkey creation
 // update local26 -> changed identifier for localStorage
 // update local27 -> add banner after successfull registration
+// update local28 -> added Close button on success Banner
 
 const successDialog = () => {
-    var styleElement = document.createElement('style');
-    styleElement.textContent = `
+  var styleElement = document.createElement('style');
+  styleElement.textContent = `
           .iBiometric_container {
             position: fixed;
             width: 100vw;
@@ -43,15 +44,16 @@ const successDialog = () => {
               cursor: pointer;
             }
         `;
-    document.head.appendChild(styleElement);
-    document.body.insertAdjacentHTML('afterbegin', `
-      <div class="iBiometric_container">
+  document.head.appendChild(styleElement);
+  document.body.insertAdjacentHTML('afterbegin', `
+      <div class="iBiometric_container_for_success_notice">
         <div class="iBiometric_dialog">
-          <div class="iBiometric_ButtonContainer">
-              <button class="iBiometric_closeButton" type="button">×</button>
-          </div>
           <h2>Success</h2>
-          <p>update_id=local27: You have successfully registered your biometrics. You can use them for login from next time.</p>
+          <p>update_id=local28: You have successfully registered your biometrics. You can use them for login from next time.</p>
+          <div class="iBiometric_button_success">
+            <button type="button" id="iBiometric_invokeCloseSuccess">Understood
+            </button>
+          </div>
         </div>
       </div>
     `);

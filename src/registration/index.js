@@ -14,8 +14,11 @@ const handleRegistration = () => {
             localStorage.setItem("userEnrollment", "true")
             localStorage.setItem("publicKey", arrayBufferToBase64(newCredentialInfo.rawId))
             console.log(newCredentialInfo);
-            // alert("Registration done, data to be sent to server!")
-            successDialog()
+            document.querySelector("#iBiometric_invokeCloseSuccess")?.addEventListener("click", () => {
+                const dialogContainer = document.querySelector('.iBiometric_container_for_success_notice');
+                dialogContainer.style.display = 'none';
+                successDialog()
+            })
         })
         .catch(error => {
             // Handle WebAuthn registration failure
