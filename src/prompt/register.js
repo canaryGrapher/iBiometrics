@@ -64,10 +64,10 @@ const insertDialog = () => {
       `;
   document.head.appendChild(styleElement);
   document.body.insertAdjacentHTML('afterbegin', `
-    <div class="iBiometric_container">
+    <div class="iBiometric_container" id="iBiometric_container_registrationWindow">
       <div class="iBiometric_dialog">
         <div class="iBiometric_ButtonContainer">
-            <button class="iBiometric_closeButton" type="button">×</button>
+            <button id="closeTheRegistrationWindow" class="iBiometric_closeButton" type="button">×</button>
         </div>
         <h2>Update</h2>
         <p>update_id=local28: Reduce the number of times you have to login for payment. Use your screen lock credentials for logging in and make it easy for you to login and make payments.</p>

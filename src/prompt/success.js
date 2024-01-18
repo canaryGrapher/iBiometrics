@@ -46,7 +46,7 @@ const successDialog = () => {
         `;
   document.head.appendChild(styleElement);
   document.body.insertAdjacentHTML('afterbegin', `
-      <div class="iBiometric_container_for_success_notice">
+      <div id="iBiometric_container_for_success_notice" class="iBiometric_container">
         <div class="iBiometric_dialog">
           <h2>Success</h2>
           <p>update_id=local28: You have successfully registered your biometrics. You can use them for login from next time.</p>

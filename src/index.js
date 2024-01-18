@@ -46,13 +46,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         } else {
             if (window.find("Last login")) {
                 insertDialog()
-                document.querySelector(".iBiometric_closeButton")?.addEventListener("click", () => {
-                    const dialogContainer = document.querySelector('.iBiometric_container');
+                const CloseDialog = () => {
+                    const dialogContainer = document.querySelector('#iBiometric_container_registrationWindow');
                     dialogContainer.style.display = 'none';
+                }
+                document.querySelector("#closeTheRegistrationWindow")?.addEventListener("click", () => {
+                    CloseDialog();
                 })
                 document.querySelector("#iBiometric_invokeBiometricRegistration")?.addEventListener("click", () => {
-                    const dialogContainer = document.querySelector('.iBiometric_container');
-                    dialogContainer.style.display = 'none';
+                    CloseDialog();
                     handleRegistration()
                 })
             }
