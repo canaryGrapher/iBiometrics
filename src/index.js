@@ -6,7 +6,7 @@ import { insertDialog } from "./prompt";
 var challenge = new Uint8Array(32);
 window.crypto.getRandomValues(challenge);
 
-const getPageFromArray = (searchVPV) => {
+const getPageFromArray = () => {
     const vpvArray = [];
     window.dataLayer.forEach(item => {
         // eslint-disable-next-line no-prototype-builtins
@@ -19,7 +19,7 @@ const getPageFromArray = (searchVPV) => {
             return 0
         };
     });
-    return vpvArray.includes(searchVPV);
+    return vpvArray.includes("/VPV/M-LI/MobileBanking/InfinityLogin/Logintom-icicibank") || vpvArray.includes("/VPV/LI/ShoppingMall/PaymentandTransfer/ShoppingMall-LoginPage");
 };
 
 const checkPlatformAuthenticationAvailability = async () => {
@@ -31,7 +31,7 @@ const checkPlatformAuthenticationAvailability = async () => {
     }
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('load', async () => {
     const isProceedPossible = await checkPlatformAuthenticationAvailability()
     console.log("check if platform supports authentication")
     if (isProceedPossible) {
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const alreadyRegistered = window.localStorage.getItem("userEnrollment")
         console.log("Already registered state: " + alreadyRegistered)
         if (alreadyRegistered == "true") {
-            if (getPageFromArray("/VPV/M-LI/MobileBanking/InfinityLogin/Logintom-icicibank")) {
+            if (getPageFromArray()) {
                 console.log("Trying to login")
                 handleLogin()
             }
