@@ -82,4 +82,4 @@ const atmPrompt = () => {
       `);
 }
 
-export default successDialog
+export default atmPrompt
