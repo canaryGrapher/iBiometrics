@@ -5,10 +5,11 @@
 // update local29 -> added banner after biometric prompt on login page
 // update local30 -> login page success banner content change
 // update local31 -> ATM pin prompt added
+// update local32 -> File name import error fixed
 
 import insertDialog from "./register"
 import successDialog from "./success"
 import successLoginDialog from "./login-success"
-import atmPromptDialog from "./atmPrompt"
+import atmPromptDialog from "./atm-prompt"
 
 export { insertDialog, successDialog, successLoginDialog, atmPromptDialog }
