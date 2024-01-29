@@ -1,10 +1,3 @@
-// update local25 -> removed prompt for Passkey creation
-// update local26 -> changed identifier for localStorage
-// update local27 -> add banner after successfull registration
-// update local28 -> added Close button on success Banner
-// update local29 -> added banner after biometric prompt on login page
-// update local30 -> login page success banner content change
-
 const insertDialog = () => {
   var styleElement = document.createElement('style');
   styleElement.textContent = `
@@ -70,7 +63,7 @@ const insertDialog = () => {
             <button id="closeTheRegistrationWindow" class="iBiometric_closeButton" type="button">×</button>
         </div>
         <h2>Update</h2>
-        <p>update_id=local30: Reduce the number of times you have to login for payment. Use your screen lock credentials for logging in and make it easy for you to login and make payments.</p>
+        <p>update_id=local31: Reduce the number of times you have to login for payment. Use your screen lock credentials for logging in and make it easy for you to login and make payments.</p>
         <div class="iBiometric_button">
           <button type="button" id="iBiometric_invokeBiometricRegistration">Enable screen lock login</button>
         </div>

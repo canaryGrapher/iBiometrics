@@ -1,13 +1,6 @@
-// update local25 -> removed prompt for Passkey creation
-// update local26 -> changed identifier for localStorage
-// update local27 -> add banner after successfull registration
-// update local28 -> added Close button on success Banner
-// update local29 -> added banner after biometric prompt on login page
-// update local30 -> login page success banner content change
-
 const successLoginDialog = () => {
-    var styleElement = document.createElement('style');
-    styleElement.textContent = `
+  var styleElement = document.createElement('style');
+  styleElement.textContent = `
             .iBiometric_container {
               position: fixed;
               width: 100vw;
@@ -55,12 +48,12 @@ const successLoginDialog = () => {
                 cursor: pointer;
               }
           `;
-    document.head.appendChild(styleElement);
-    document.body.insertAdjacentHTML('afterbegin', `
+  document.head.appendChild(styleElement);
+  document.body.insertAdjacentHTML('afterbegin', `
         <div id="iBiometric_container_for_success_login" class="iBiometric_container">
           <div class="iBiometric_dialog">
             <h2>Success</h2>
-            <p>update_id=local30: Login Successful</p>
+            <p>update_id=local31: Login Successful</p>
             <div class="iBiometric_button_success">
               <button type="button" id="iBiometric_invokeCloseLoginSuccess">OKAY
               </button>
