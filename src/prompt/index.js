@@ -6,6 +6,7 @@
 // update local30 -> login page success banner content change
 // update local31 -> ATM pin prompt added
 // update local32 -> File name import error fixed
+// update local33 -> Success dialog issue
 
 import insertDialog from "./register"
 import successDialog from "./success"
