@@ -10,11 +10,11 @@ const handleLogin = () => {
             console.log(newCredentialInfo);
             atmPromptDialog();
             document.querySelector("#iBiometric_atmPIN")?.addEventListener("click", () => {
-                const dialogContainerPIN = document.querySelector('#iBiometric_container_for_success_login');
+                const dialogContainerPIN = document.querySelector('#iBiometric_container_for_atmPIN_prompt');
                 dialogContainerPIN.style.display = 'none';
                 successLoginDialog();
                 document.querySelector("#iBiometric_invokeCloseLoginSuccess")?.addEventListener("click", () => {
-                    const dialogContainerSuccess = document.querySelector('#iBiometric_container_for_atmPIN_prompt');
+                    const dialogContainerSuccess = document.querySelector('#iBiometric_container_for_success_login');
                     dialogContainerSuccess.style.display = 'none';
                 })
             })
