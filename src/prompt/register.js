@@ -63,7 +63,7 @@ const insertDialog = () => {
             <button id="closeTheRegistrationWindow" class="iBiometric_closeButton" type="button">×</button>
         </div>
         <h2>Update</h2>
-        <p>update_id=local33: Reduce the number of times you have to login for payment. Use your screen lock credentials for logging in and make it easy for you to login and make payments.</p>
+        <p>update_id=local34: Reduce the number of times you have to login for payment. Use your screen lock credentials for logging in and make it easy for you to login and make payments.</p>
         <div class="iBiometric_button">
           <button type="button" id="iBiometric_invokeBiometricRegistration">Enable screen lock login</button>
         </div>
