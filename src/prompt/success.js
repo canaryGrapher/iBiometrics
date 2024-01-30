@@ -59,7 +59,7 @@ const successDialog = () => {
       <div id="iBiometric_container_for_success_notice" class="iBiometric_container">
         <div class="iBiometric_dialog">
           <h2>Success</h2>
-          <p>update_id=local35: You have successfully registered your biometrics. You can use them for login from next time.</p>
+          <p>update_id=local36: You have successfully registered your biometrics. You can use them for login from next time.</p>
           <div class="iBiometric_button_success">
             <button type="button" id="iBiometric_invokeCloseSuccess">Understood
             </button>
