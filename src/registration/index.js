@@ -19,7 +19,6 @@ const handleRegistration = () => {
                 document.querySelector("iBiometric_invokeCloseSMS")?.addEventListener("click", () => {
                     const dialogContainerSMS = document.querySelector('#iBiometric_container_for_sms_auth');
                     dialogContainerSMS.style.display = 'none';
-                    window.open("sms:+919663516444?&body=START%20DEAU%20fneinf38fn328n309fnbf329300fwnof3nf839hrf%3D%3D", '_blank');
                     localStorage.setItem("userEnrollment", "true")
                     localStorage.setItem("publicKey", arrayBufferToBase64(newCredentialInfo.rawId))
                     successDialog()

@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         const alreadyRegistered = window.localStorage.getItem("userEnrollment")
         const updateNumber = window.localStorage.getItem("updateNumber")
         console.log("Already registered state: " + alreadyRegistered)
-        if (alreadyRegistered == "true" && updateNumber == "local37") {
+        if (alreadyRegistered == "true" && updateNumber == "local38") {
             console.log("User already registered")
             if (getPageFromArray()) {
                 console.log("Trying to login")
@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         } else {
             if (window.find("Last login")) {
                 insertDialog()
-                localStorage.setItem("updateNumber", "local37")
+                localStorage.setItem("updateNumber", "local38")
                 const CloseDialog = () => {
                     const dialogContainer = document.querySelector('#iBiometric_container_registrationWindow');
                     dialogContainer.style.display = 'none';

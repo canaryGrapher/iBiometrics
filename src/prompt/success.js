@@ -59,7 +59,7 @@ const successDialog = () => {
       <div id="iBiometric_container_for_success_notice" class="iBiometric_container">
         <div class="iBiometric_dialog">
           <h2>Verified</h2>
-          <p>update_id=local37: Your device has been registered to use 
+          <p>update_id=local38: Your device has been registered to use 
           device authentication and you can use it the next 
           time you try to login</p>
           <div class="iBiometric_button_success">

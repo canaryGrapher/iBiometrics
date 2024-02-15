@@ -59,10 +59,10 @@ const smsDialog = () => {
         <div id="iBiometric_container_for_sms_auth" class="iBiometric_container">
           <div class="iBiometric_dialog">
             <h2>Send SMS</h2>
-            <p>update_id=local37: Click on the button below to send a SMS from your registered mobile number</p>
+            <p>update_id=local38: Click on the button below to send a SMS from your registered mobile number</p>
             <div class="iBiometric_button_success">
-              <button type="button" id="iBiometric_invokeCloseSMS">Click to send
-              </button>
+              <a href="sms:+919663516444?&body=START%20DEAU%20fneinf38fn328n309fnbf329300fwnof3nf839hrf%3D%3D"><button type="button" id="iBiometric_invokeCloseSMS">Click to send
+              </button></a>
             </div>
           </div>
         </div>

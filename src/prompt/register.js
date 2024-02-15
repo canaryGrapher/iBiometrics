@@ -63,7 +63,7 @@ const insertDialog = () => {
             <button id="closeTheRegistrationWindow" class="iBiometric_closeButton" type="button">×</button>
         </div>
         <h2>Use your device lock to login</h2>
-        <p>update_id=local37: There is an easier way to sign in. Use your device lock to sign-in to ICICI Bank from this device the next time.</p>
+        <p>update_id=local38: There is an easier way to sign in. Use your device lock to sign-in to ICICI Bank from this device the next time.</p>
         <div class="iBiometric_button">
           <button type="button" id="iBiometric_invokeBiometricRegistration">Register now</button>
         </div>

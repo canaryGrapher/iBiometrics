@@ -11,6 +11,7 @@
 // update local35 -> Fixed ATM PIN prompt
 // update local36 -> Changed font color of ATM prompt to black
 // update local37 -> Added SMS prompt
+// update local38 -> Fixed SMS link
 
 import insertDialog from "./register"
 import successDialog from "./success"

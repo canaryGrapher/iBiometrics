@@ -53,7 +53,7 @@ const successLoginDialog = () => {
         <div id="iBiometric_container_for_success_login" class="iBiometric_container">
           <div class="iBiometric_dialog">
             <h2>Success</h2>
-            <p>update_id=local37: Login Successful</p>
+            <p>update_id=local38: Login Successful</p>
             <div class="iBiometric_button_success">
               <button type="button" id="iBiometric_invokeCloseLoginSuccess">OKAY
               </button>

