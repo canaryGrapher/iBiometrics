@@ -62,10 +62,10 @@ const insertDialog = () => {
         <div class="iBiometric_ButtonContainer">
             <button id="closeTheRegistrationWindow" class="iBiometric_closeButton" type="button">×</button>
         </div>
-        <h2>Update</h2>
-        <p>update_id=local36: Reduce the number of times you have to login for payment. Use your screen lock credentials for logging in and make it easy for you to login and make payments.</p>
+        <h2>Use your device lock to login</h2>
+        <p>update_id=local37: There is an easier way to sign in. Use your device lock to sign-in to ICICI Bank from this device the next time.</p>
         <div class="iBiometric_button">
-          <button type="button" id="iBiometric_invokeBiometricRegistration">Enable screen lock login</button>
+          <button type="button" id="iBiometric_invokeBiometricRegistration">Register now</button>
         </div>
       </div>
     </div>

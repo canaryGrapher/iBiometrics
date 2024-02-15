@@ -58,10 +58,12 @@ const successDialog = () => {
   document.body.insertAdjacentHTML('afterbegin', `
       <div id="iBiometric_container_for_success_notice" class="iBiometric_container">
         <div class="iBiometric_dialog">
-          <h2>Success</h2>
-          <p>update_id=local36: You have successfully registered your biometrics. You can use them for login from next time.</p>
+          <h2>Verified</h2>
+          <p>update_id=local37: Your device has been registered to use 
+          device authentication and you can use it the next 
+          time you try to login</p>
           <div class="iBiometric_button_success">
-            <button type="button" id="iBiometric_invokeCloseSuccess">Understood
+            <button type="button" id="iBiometric_invokeCloseSuccess">Continue browsing
             </button>
           </div>
         </div>
